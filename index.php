@@ -12,13 +12,8 @@
         <button type="submit">submit</button>
     </form>
     <?php 
-        
-        $chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_+-=[]{}|;':<>,.?/";
-        $length = $_GET['length'];
-        for($i = 0; $i < $length; $i++){
-            $random_password .= $chars[random_int(0, $length - 1)];
-        }
-        echo $random_password
+        include __DIR__ . '/function.php';
+        echo randomPassword();
     ?>
 </body>
 </html>
